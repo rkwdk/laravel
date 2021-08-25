@@ -20,7 +20,7 @@ services:
       - "8080:80"
 
   php-apache:
-    build: ./php
+    build: ./docker
     volumes:
       - ./htdocs:/var/www/html
     restart: always
@@ -31,3 +31,5 @@ services:
 
 volumes:
     db_data: {}
+
+  
