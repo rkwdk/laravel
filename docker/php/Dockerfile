@@ -7,12 +7,11 @@ COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
 
 # install Node.js
-COPY --from=node:10.22 /usr/local/bin /usr/local/bin
-COPY --from=node:10.22 /usr/local/lib /usr/local/lib
-
 RUN apk update \
     && apk add \
     git \
+	nodejs \
+	npm \
     zip \
     unzip \
     vim \
