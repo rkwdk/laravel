@@ -1,10 +1,12 @@
 import './bootstrap'
 import Vue from 'vue'
-import FooBar from './components/FooBar'
+import Sample from './components/Sample'
+
+Vue.component('sample-component',require('./components/Sample.vue').default);
 
 const app = new Vue({
-  el: '#app',
-  components: {
-    FooBar,
-  }
-})
+    el: '#app',
+    components: {
+        Sample
+    }
+});
