@@ -1,6 +1,6 @@
 
 <html>
     <body>
-        <h1>First, {{ $nums }}</h1>
+        <h1>Second, {{ $nums }}</h1>
     </body>
 </html>
