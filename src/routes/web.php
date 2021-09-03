@@ -10,6 +10,9 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('page.test',[ 'nums' => rand() ]);
  });
+ Route::get('/profile', function () {
+    return view('page.profile',[ 'nums' => rand() ]);
+ });
 
 //  Route::get('/test2', function () {
 //      ///TODO 使い道がわからない
@@ -18,7 +21,9 @@ Route::get('/test', function () {
 
  if (View::exists('page.second')) {
     Route::get('/test2', function () {
-        return view('page.second',[ 'nums' => rand() ]);
+        return view('page.second')
+        ->with('nums',rand())
+        ->with('name','test');
      });
 } else {
     Route::get('/test2', function () {
