@@ -1,6 +1,0 @@
-<html>
-<body>
-    home
-</body>
-</html>
-

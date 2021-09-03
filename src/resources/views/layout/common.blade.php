@@ -9,9 +9,8 @@
     <div class="main">
         @yield('content')
     </div>
-    <div class="sub">
+    <div class="sidebar">
         @yield('sub')
-        @yield('pageSub')
     </div>
 </div>
 @yield('footer')

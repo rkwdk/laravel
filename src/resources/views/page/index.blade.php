@@ -15,7 +15,7 @@
     <p>コンテンツ内容が入ります</p>
 @endsection
 
-@include('layout.sub')
+@include('layout.sidebar')
 
 @section('pageSub')
     <p>個別サイドバーの内容</p>
