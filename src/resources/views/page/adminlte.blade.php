@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'mandelbrot')
+@section('title', 'マンデルブロ集合')
 
 @section('content_header')
     <h1>ダッシュボード2</h1>

@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'マンデルブロ集合',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>mandelbrot</b>set',
+    'logo' => 'マンデルブロ集合',
     'logo_img' => null,
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -233,7 +233,7 @@ return [
             // 'icon_color'   => 'warning',              // The initial icon color (optional).
             // 'label'        => 0,                      // The initial label for the badge (optional).
             // 'label_color'  => 'danger',               // The initial badge color (optional).
-            'url'          => 'notifications/show',   // The url to access all notifications/elements (required).
+            'url'          => '/logout',   // The url to access all notifications/elements (required).
             'topnav_right' => true,                   // Or "topnav => true" to place on the left (required).
             'dropdown_mode'   => true,                // Enables the dropdown mode (optional).
             'dropdown_flabel' => 'logout', // The label for the dropdown footer link (optional).
@@ -242,10 +242,10 @@ return [
             //     'period' => 30,                       // The update period for get new data (in seconds, optional).
             // ],
         ],
-        // [
-        //     'type'         => 'fullscreen-widget',
-        //     'topnav_right' => true,
-        // ],
+        [
+            'type'         => 'fullscreen-widget',
+            'topnav_right' => true,
+        ],
 
         // Sidebar items:
         // [
@@ -273,12 +273,12 @@ return [
         [
             'text' => '設定',
             'url'  => 'settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-cog',
         ],
         [
             'text' => 'ログアウト',
             'url'  => 'logout',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-sign-out-alt',
         ],
         // [
         //     'text'    => 'multilevel',
