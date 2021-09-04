@@ -1,29 +1,16 @@
 <?php
-//namespace 忘れでnot found
 namespace App\Repositories;
-
-use Illuminate\Foundation\Application;
 
 class UserRepository
 {
-
-   /**
-    * UserRepository constructor.
-    *
-    * @param User $model
-    */
-   public function __construct()
+    protected $name;
+   public function __construct(String $str)
    {
-
+       $this->name = $str;
    }
 
-   public function count()
+   public function name()
    {
-       return 100;
-   }
-
+    return $this->name;
+    }
 }
-
-app()->bind(UserRepository::class,function(Application $app){
-    return new UserRepository();
-});

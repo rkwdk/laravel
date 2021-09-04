@@ -1,6 +1,6 @@
 
 <html>
     <body>
-        <h1>count, {{ $count }}</h1>
+        <h1>name, {{ $name }}</h1>
     </body>
 </html>

@@ -10,9 +10,13 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('page.test',[ 'nums' => rand() ]);
  });
- Route::get('/profile', function () {
-    return view('page.profile',[ 'nums' => rand() ]);
- });
+Route::get('/profile', function () {
+return view('page.profile',[ 'nums' => rand() ]);
+});
+
+Route::get('/dashboard', function () {
+return view('page.profile',[ 'name' => "Mr.aaa" ]);
+});
 
 //  Route::get('/test2', function () {
 //      ///TODO 使い道がわからない

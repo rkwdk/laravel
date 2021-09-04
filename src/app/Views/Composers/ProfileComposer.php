@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Composers;
+namespace App\Views\Composers;
 
 use App\Repositories\UserRepository;
 use Illuminate\View\View;
@@ -22,8 +22,7 @@ class ProfileComposer
      */
     public function __construct(UserRepository $users)
     {
-        //
-        // // 依存関係はサービスコンテナによって自動的に解決される
+        // 依存関係はサービスコンテナによって自動的に解決される
         $this->users = $users;
     }
 
@@ -36,6 +35,6 @@ class ProfileComposer
     public function compose(View $view)
     {
         // $view->with('count', 'count');
-        $view->with('count', $this->users->count());
+        $view->with('name', $this->users->name());
     }
 }

@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use App\View\Composers\ProfileComposer;
+use App\Repositories\UserRepository;
+use App\Views\Composers\ProfileComposer;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -15,7 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(UserRepository::class,function(Application $app){
+            return new UserRepository("first");
+        });
     }
 
     /**
@@ -35,5 +39,6 @@ class AppServiceProvider extends ServiceProvider
         View::composer('page.dashboard', function ($view) {
             //
         });
+
     }
 }
