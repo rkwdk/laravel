@@ -34,7 +34,6 @@ class ProfileComposer
      */
     public function compose(View $view)
     {
-        // $view->with('count', 'count');
         $view->with('name', $this->users->name());
     }
 }

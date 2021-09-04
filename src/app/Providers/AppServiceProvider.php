@@ -7,6 +7,7 @@ use App\Views\Composers\ProfileComposer;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\App;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,8 +18,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(UserRepository::class,function(Application $app){
-            return new UserRepository("first");
+        App::bind(UserRepository::class,function(Application $app){
+            return new UserRepository("ProfileComposer");
         });
     }
 
@@ -33,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('key', 'value');
 
         // クラスベースのコンポーザを使用する
-        View::composer('page.profile', ProfileComposer::class);
+        View::composer('*', ProfileComposer::class);
 
         // クロージャベースのコンポーザを使用
         View::composer('page.dashboard', function ($view) {
