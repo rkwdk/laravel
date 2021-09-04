@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\View;
 Route::get('/', function () {
    return view('page.index');
 });
+Route::get('/login', function () {
+    return view('auth.login');
+});
 
 Route::get('/test', function () {
     return view('page.test',[ 'nums' => rand() ]);
