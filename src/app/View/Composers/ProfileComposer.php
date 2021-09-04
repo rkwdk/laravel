@@ -20,11 +20,11 @@ class ProfileComposer
      * @param  \App\Repositories\UserRepository  $users
      * @return void
      */
-    public function __construct()
+    public function __construct(UserRepository $users)
     {
-        // UserRepository $users
+        //
         // // 依存関係はサービスコンテナによって自動的に解決される
-        // $this->users = $users;
+        $this->users = $users;
     }
 
     /**
@@ -35,7 +35,7 @@ class ProfileComposer
      */
     public function compose(View $view)
     {
-        $view->with('count', 'count');
-        // $view->with('count', $this->users->count());
+        // $view->with('count', 'count');
+        $view->with('count', $this->users->count());
     }
 }
