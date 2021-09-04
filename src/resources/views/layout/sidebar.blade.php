@@ -1,18 +1,15 @@
+<!-- サイドバー -->
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu">
 
-@section('sidebar')
-<div class="col-md-2">
-  <div class="panel panel-default">
-  <div class="panel-heading">
-  共通のサイドバー部分2
-  </div>
-  <!-- <div class="panel-body"> -->
-  <ul class="nav nav-pills nav-stacked">
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu1</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu2</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu3</a></li>
-  <li><a href=""><i class="glyphicon glyphicon-menu-right"></i> submenu4</a></li>
-  </ul>
-  <!-- </div> -->
-  </div>
-</div>
-@endsection
+            <!-- メニューヘッダ -->
+            <li class="header">機能一覧</li>
+
+            <!-- メニュー項目 -->
+            <li><a href="">新規登録</a></li>
+
+        </ul>
+    </section>
+</aside>
+<!-- end sidebar -->

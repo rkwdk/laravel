@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'mandelbrot')
 
 @section('content_header')
-    <h1>ダッシュボード</h1>
+    <h1>ダッシュボード2</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
 
 @section('css')
     {{-- ページごとCSSの指定
-    <link rel="stylesheet" href="/css/xxx.css">
+    <link rel="stylesheet" href="/css/admin_custom.css">
     --}}
 @stop
 
