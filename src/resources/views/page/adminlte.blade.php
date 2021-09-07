@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>ここがコンテンツ部分です</p>
+    <header-component></header-component>
 @stop
 
 @section('css')
