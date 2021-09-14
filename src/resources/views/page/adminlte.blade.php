@@ -2,12 +2,10 @@
 
 @section('title', 'マンデルブロ集合')
 
-@section('content_header')
-    <h1>ダッシュボード2</h1>
-@stop
-
 @section('content')
-    <header-component></header-component>
+    <div id="app">
+        <body-component></body-component>
+    </div>
 @stop
 
 @section('css')
@@ -17,5 +15,5 @@
 @stop
 
 @section('js')
-    <script> console.log('ページごとJSの記述'); </script>
+    <script src="{{ asset('/js/app.js') }}"></script>
 @stop
