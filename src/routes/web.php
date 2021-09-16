@@ -21,3 +21,6 @@ Route::get('/home', function () {
 Route::get('/settings', function () {
     return view('page.adminlte');
 });
+Route::get('/logout', function () {
+    return view('page.adminlte');
+});
