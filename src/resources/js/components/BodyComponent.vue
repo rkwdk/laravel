@@ -48,18 +48,18 @@ export default{
     },
     computed: {
     height: function () {
-        return this.h > this.w ? this.h:this.w
+        return this.h < this.w ? this.h:this.w
     },
     width: function () {
-        return this.h > this.w ? this.h:this.w
+        return this.h < this.w ? this.h:this.w
     },
     size: function () {
-        return this.h > this.w ?  "0 0 "+this.h*2+" "+this.h*2 : "0 0 "+this.w*2+" "+this.w*2
+        return this.h < this.w ?  "0 0 "+this.h*2+" "+this.h*2 : "0 0 "+this.w*2+" "+this.w*2
     },
     circles: function () {
         let circles = [];
         let count = 0;
-        let maxN = 10;
+        let maxN = 1;
         let r = 1;
         let h = this.height;
         let w = this.width;
