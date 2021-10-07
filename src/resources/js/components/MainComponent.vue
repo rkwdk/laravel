@@ -1,18 +1,20 @@
 <template>
-    <!-- svgの描画 -->
-    <svg :width="width" :height="height" :viewBox="size">
-        <!-- vueによる円の繰り返し描画 -->
-        <circle v-for="circle in circles" :key="circle.id"
-                :cx="circle.x" :cy="circle.y" :r="circle.r"
-                :fill="circle.color"
-        />
-    </svg>
+  <div class="example">
+    <MyCanvas :radius="radius"/>
+    <p><input type="range" min="0" max="100" v-model.number="radius"></p>
+  </div>
 </template>
 <script>
+// キャンバス用コンポーネントの読み込み
+import MyCanvas from './MyCanvas.vue'
 
 export default{
+    components: {
+        MyCanvas
+    },
     data() {
         return {
+            radius: 50,
             //ブラウザのサイドメニュとヘッダー以外の高さと幅を取得
             h:document.getElementsByClassName('content-wrapper')[0].offsetHeight,
             w:document.getElementsByClassName('content-wrapper')[0].offsetWidth
