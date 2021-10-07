@@ -267,17 +267,17 @@ return [
         ['header' => 'メニュー'],
         [
             'text' => 'メイン',
-            'url'  => 'home',
+            'url'  => '/',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => '設定',
-            'url'  => 'settings',
+            'url'  => '/',
             'icon' => 'fas fa-fw fa-cog',
         ],
         [
             'text' => 'ログアウト',
-            'url'  => 'logout',
+            'url'  => '/',
             'icon' => 'fas fa-fw fa-sign-out-alt',
         ],
         // [
