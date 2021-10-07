@@ -59,7 +59,7 @@ export default{
     circles: function () {
         let circles = [];
         let count = 0;
-        let maxN = 1;
+        let maxN = 10;
         let r = 1;
         let h = this.height;
         let w = this.width;

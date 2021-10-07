@@ -1,15 +1,12 @@
 import './bootstrap'
 import Vue from 'vue'
-import HeaderComponent from "./components/HeaderComponent";
-import BodyComponent from "./components/BodyComponent";
+import MainComponent from "./components/MainComponent";
 
-Vue.component('header-component', HeaderComponent);
-Vue.component('body-component', BodyComponent);
+Vue.component('main-component', MainComponent);
 
 const app = new Vue({
     el: '#app',
     components: {
-        HeaderComponent,
-        BodyComponent
+        MainComponent
     }
   })

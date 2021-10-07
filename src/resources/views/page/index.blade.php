@@ -1,28 +1,19 @@
-@extends('layout.common')
+@extends('adminlte::page')
 
-@section('title', 'ページタイトル')
-@section('keywords', 'A,B,C')
-@section('description', '説明文')
-@section('pageCss')
-<link href="/css/page.css" rel="stylesheet">
-@endsection
-
-@include('layout.head')
-
-@include('layout.header')
+@section('title', 'マンデルブロ集合')
 
 @section('content')
-    <p>コンテンツ内容が入ります</p>
-@endsection
+    <div id="app">
+        <main-component/>
+    </div>
+@stop
 
-@include('layout.sidebar')
+@section('css')
+    {{-- ページごとCSSの指定
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    --}}
+@stop
 
-@section('pageSub')
-    <p>個別サイドバーの内容</p>
-@endsection
-
-@section('pageJs')
-<script src="/js/page.js"></script>
-@endsection
-
-@include('layout.footer')
+@section('js')
+    <script src="{{ mix('/js/app.js') }}"></script>
+@stop
