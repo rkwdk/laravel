@@ -1,7 +1,7 @@
 <template>
   <div class="example">
     <MyCanvas :radius="radius" :height="height" :width="width"/>
-    <p><input type="range" min="0" max="100" v-model.number="radius"></p>
+    <!-- <p><input type="range" min="0" max="100" v-model.number="radius"></p> -->
   </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default{
     },
     data() {
         return {
-            radius: 50,
+            radius: 0.5,
             //ブラウザのサイドメニュとヘッダー以外の高さと幅を取得
             h:document.getElementsByClassName('content-wrapper')[0].offsetHeight,
             w:document.getElementsByClassName('content-wrapper')[0].offsetWidth
@@ -57,15 +57,16 @@ export default{
     computed: {
     height: function () {
         //正方形にしないとマンデルブロ集合が正しく描画されないので、小さい方に合わせる
-        return this.h < this.w ? this.h:this.w
+        return this.h;// < this.w ? this.h:this.w
     },
     width: function () {
         //正方形にしないとマンデルブロ集合が正しく描画されないので、小さい方に合わせる
-        return this.h < this.w ? this.h:this.w
+        return this.w;// < this.w ? this.h:this.w
     },
     size: function () {
         //svgのviewportを算出して返す
-        return this.h < this.w ?  "0 0 "+this.h*2+" "+this.h*2 : "0 0 "+this.w*2+" "+this.w*2
+        return "0 0 "+this.w+" "+this.h;
+        // return this.h < this.w ?  "0 0 "+this.h*2+" "+this.h*2 : "0 0 "+this.w*2+" "+this.w*2
     },
     circles: function () {
         let circles = [];//svg用の円の配列の格納
