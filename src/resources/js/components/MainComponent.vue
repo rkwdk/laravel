@@ -1,6 +1,6 @@
 <template>
   <div class="example">
-    <MyCanvas :radius="radius"/>
+    <MyCanvas :radius="radius" :height="height" :width="width"/>
     <p><input type="range" min="0" max="100" v-model.number="radius"></p>
   </div>
 </template>
